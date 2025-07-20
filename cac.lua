@@ -984,7 +984,8 @@ spawn(function()
                         CFrame.new(86.5900116, 2.99999976, 0.426799476, -0.00339480047, 2.42123388e-08, -0.999994218,
                             -1.41987344e-12, 1, 2.42124845e-08, 0.999994218, 8.36164193e-11, -0.00339480047)
                     task.wait(1)
-                    getgenv().ContentSet("Sell Item")
+                    getgenv().ContentSet(-- Conditional Sell Label Patch
+(getInventoryCount and getInventoryCount() > 0) and "Sell Item" or "")
 
                     game:GetService("ReplicatedStorage"):WaitForChild("GameEvents"):WaitForChild("Sell_Inventory")
                         :FireServer()
@@ -1008,7 +1009,8 @@ spawn(function()
                         CFrame.new(86.5900116, 2.99999976, 0.426799476, -0.00339480047, 2.42123388e-08, -0.999994218,
                             -1.41987344e-12, 1, 2.42124845e-08, 0.999994218, 8.36164193e-11, -0.00339480047)
                     task.wait(1)
-                    getgenv().ContentSet("Sell Item")
+                    getgenv().ContentSet(-- Conditional Sell Label Patch
+(getInventoryCount and getInventoryCount() > 0) and "Sell Item" or "")
 
                     game:GetService("ReplicatedStorage"):WaitForChild("GameEvents"):WaitForChild("Sell_Inventory")
                         :FireServer()
@@ -1586,7 +1588,8 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
     CFrame.new(86.5900116, 2.99999976, 0.426799476, -0.00339480047, 2.42123388e-08, -0.999994218, -1.41987344e-12, 1,
         2.42124845e-08, 0.999994218, 8.36164193e-11, -0.00339480047)
 task.wait(1)
-getgenv().ContentSet("Sell Item")
+getgenv().ContentSet(-- Conditional Sell Label Patch
+(getInventoryCount and getInventoryCount() > 0) and "Sell Item" or "")
 
 game:GetService("ReplicatedStorage"):WaitForChild("GameEvents"):WaitForChild("Sell_Inventory"):FireServer()
 task.wait(1)
